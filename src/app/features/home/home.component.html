@@ -1,5 +1,6 @@
 <p>home page</p>
-<button (click)="getPosts()" class="block p-1 bg-blue-500 rounded shadow m-1">Get Posts</button>
-<button (click)="getTodos()" class="block p-1 bg-blue-500 rounded shadow m-1">Get todos</button>
+<button (click)="getPosts()" mat-raised-button>Get Posts</button>
+<button (click)="getTodos()" mat-raised-button>Get todos</button>
 <hr />
-<p *ngIf="isLoadingPosts">loading posts...</p>
+<mat-spinner *ngIf="isLoadingPosts"></mat-spinner>
+
