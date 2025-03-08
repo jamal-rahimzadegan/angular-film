@@ -1,6 +1,7 @@
 <p>home page</p>
 <button (click)="getPosts()" mat-raised-button>Get Posts</button>
 <button (click)="getTodos()" mat-raised-button>Get todos</button>
-<hr />
+<hr/>
+<app-input label="Search" placeholder="type here..."></app-input>
 <mat-spinner *ngIf="isLoadingPosts"></mat-spinner>
 

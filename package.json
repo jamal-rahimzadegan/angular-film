@@ -7,6 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "new:component": "node src/scripts/generate-component.js",
+    "close-port": "kill-port 4200",
     "test": "ng test"
   },
   "private": true,

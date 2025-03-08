@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { ApiService } from '../../core/services/api.service';
-import { HttpClientModule } from '@angular/common/http';
-import { Subscription } from 'rxjs';
-import { CommonModule } from '@angular/common';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { MatButtonModule } from '@angular/material/button';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import {Component} from '@angular/core';
+import {RouterOutlet} from '@angular/router';
+import {ApiService} from '../../core/services/api.service';
+import {HttpClientModule} from '@angular/common/http';
+import {Subscription} from 'rxjs';
+import {CommonModule} from '@angular/common';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatButtonModule} from '@angular/material/button';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {InputComponent} from "../../shared/components/input/input.component";
 
 @Component({
   selector: 'app-root',
@@ -18,6 +19,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatSlideToggleModule,
     MatButtonModule,
     MatProgressSpinnerModule,
+    InputComponent,
   ],
   providers: [ApiService],
   templateUrl: './home.component.html',
@@ -26,7 +28,8 @@ export class HomeComponent {
   isLoadingPosts = false;
   subscription: Subscription = new Subscription();
 
-  constructor(private apiService: ApiService) {}
+  constructor(private apiService: ApiService) {
+  }
 
   getPosts() {
     this.isLoadingPosts = true;
